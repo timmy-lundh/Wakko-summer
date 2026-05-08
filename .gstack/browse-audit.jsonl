@@ -1,0 +1,11 @@
+{"ts":"2026-05-08T15:04:21.763Z","cmd":"goto","args":"http://localhost:8765/index.html","origin":"http://localhost:8765/index.html","durationMs":691,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-08T15:04:24.276Z","cmd":"screenshot","args":"/tmp/wakko-home.png","origin":"http://localhost:8765/index.html","durationMs":511,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-08T15:04:32.534Z","cmd":"goto","args":"http://localhost:8765/product.html?id=unicorn","origin":"http://localhost:8765/product.html?id=unicorn","durationMs":11,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-08T15:04:32.785Z","cmd":"screenshot","args":"/tmp/wakko-product.png","origin":"http://localhost:8765/product.html?id=unicorn","durationMs":205,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-08T15:04:38.970Z","cmd":"js","args":"addToCart('unicorn'); addToCart('sprinkler'); addToCart('lounger')","origin":"http://localhost:8765/product.html?id=unicorn","durationMs":5,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-08T15:04:39.024Z","cmd":"goto","args":"http://localhost:8765/cart.html","origin":"http://localhost:8765/cart.html","durationMs":10,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-08T15:04:39.183Z","cmd":"screenshot","args":"/tmp/wakko-cart.png","origin":"http://localhost:8765/cart.html","durationMs":112,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-08T15:04:44.495Z","cmd":"goto","args":"http://localhost:8765/checkout.html","origin":"http://localhost:8765/checkout.html","durationMs":9,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-08T15:04:44.663Z","cmd":"screenshot","args":"/tmp/wakko-checkout.png","origin":"http://localhost:8765/checkout.html","durationMs":121,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-08T15:04:53.143Z","cmd":"goto","args":"http://localhost:8765/index.html","origin":"http://localhost:8765/index.html","durationMs":8,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-08T15:04:54.330Z","cmd":"responsive","args":"/tmp/wakko-responsive","origin":"http://localhost:8765/index.html","durationMs":1139,"status":"ok","hasCookies":false,"mode":"launched"}
