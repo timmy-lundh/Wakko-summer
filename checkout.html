@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Wakko Summer</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="checkout">
+
+  <!-- ===== HEADER (minimal on checkout) ===== -->
+  <header class="header">
+    <nav class="nav">
+      <a class="nav__logo" href="index.html">
+        <span class="nav__logo-icon">☀️</span> Wakko Summer
+      </a>
+      <div style="display:flex;align-items:center;gap:10px;font-size:0.85rem;font-weight:700;color:var(--text-light);">
+        <span>🔒 Secure Checkout</span>
+      </div>
+      <div class="nav__actions">
+        <a href="cart.html" class="nav__cart-btn">
+          🛒 Cart <span class="nav__cart-count">0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== CHECKOUT PAGE ===== -->
+  <main class="checkout-page">
+    <div class="container">
+      <h1>Checkout</h1>
+
+      <div class="checkout-layout">
+
+        <!-- Left: Form -->
+        <form class="checkout-form" id="checkoutForm">
+
+          <!-- Section 1: Customer details -->
+          <div class="checkout-section">
+            <h2 class="checkout-section__title">
+              <span class="checkout-section__number">1</span>
+              Your Details
+            </h2>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input id="firstName" type="text" placeholder="Anna" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input id="lastName" type="text" placeholder="Larsson" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input id="email" type="email" placeholder="anna@email.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input id="phone" type="tel" placeholder="+46 70 123 45 67" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Shipping -->
+          <div class="checkout-section">
+            <h2 class="checkout-section__title">
+              <span class="checkout-section__number">2</span>
+              Shipping Address
+            </h2>
+            <div class="form-row">
+              <div class="form-group full">
+                <label for="address">Street Address *</label>
+                <input id="address" type="text" placeholder="Sommargatan 12" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">City *</label>
+                <input id="city" type="text" placeholder="Stockholm" required />
+              </div>
+              <div class="form-group">
+                <label for="postcode">Postcode *</label>
+                <input id="postcode" type="text" placeholder="114 21" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="country">Country *</label>
+                <select id="country" required>
+                  <option value="">Select country</option>
+                  <option value="SE" selected>Sweden</option>
+                  <option value="NO">Norway</option>
+                  <option value="DK">Denmark</option>
+                  <option value="FI">Finland</option>
+                  <option value="DE">Germany</option>
+                  <option value="NL">Netherlands</option>
+                  <option value="GB">United Kingdom</option>
+                  <option value="FR">France</option>
+                  <option value="ES">Spain</option>
+                  <option value="IT">Italy</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="shipping-method">Shipping Method *</label>
+                <select id="shipping-method">
+                  <option value="standard">Standard (1–3 days) — €4.99</option>
+                  <option value="express">Express (next day) — €9.99</option>
+                  <option value="free">Free (3–5 days) — FREE over €50</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: Payment -->
+          <div class="checkout-section">
+            <h2 class="checkout-section__title">
+              <span class="checkout-section__number">3</span>
+              Payment Method
+            </h2>
+            <div class="payment-options">
+
+              <label class="payment-option selected">
+                <input type="radio" name="payment" value="card" checked />
+                <div class="payment-option-label">
+                  <div class="payment-option-name">Credit / Debit Card</div>
+                  <div class="payment-option-desc">Visa, Mastercard, Amex</div>
+                </div>
+                <div class="payment-option-icons">💳</div>
+              </label>
+
+              <label class="payment-option">
+                <input type="radio" name="payment" value="paypal" />
+                <div class="payment-option-label">
+                  <div class="payment-option-name">PayPal</div>
+                  <div class="payment-option-desc">Pay with your PayPal account</div>
+                </div>
+                <div class="payment-option-icons">🅿️</div>
+              </label>
+
+              <label class="payment-option">
+                <input type="radio" name="payment" value="klarna" />
+                <div class="payment-option-label">
+                  <div class="payment-option-name">Klarna — Buy Now, Pay Later</div>
+                  <div class="payment-option-desc">Split into 3 interest-free payments</div>
+                </div>
+                <div class="payment-option-icons">🟣</div>
+              </label>
+
+              <label class="payment-option">
+                <input type="radio" name="payment" value="swish" />
+                <div class="payment-option-label">
+                  <div class="payment-option-name">Swish</div>
+                  <div class="payment-option-desc">Instant mobile payment (Sweden)</div>
+                </div>
+                <div class="payment-option-icons">📱</div>
+              </label>
+
+            </div>
+
+            <!-- Card fields placeholder -->
+            <div style="margin-top:20px;background:var(--gray-50);border-radius:var(--radius-md);padding:20px;border:2px dashed var(--gray-200);">
+              <div style="text-align:center;font-size:0.875rem;font-weight:600;color:var(--text-light);">
+                🔒 Payment fields will be provided by your payment processor (Stripe / Adyen / etc.)
+              </div>
+            </div>
+          </div>
+
+          <!-- Place order -->
+          <button type="submit" class="btn btn--primary btn--lg btn--full" style="margin-top:8px">
+            🛒 Place Order
+          </button>
+          <div class="checkout-secure">
+            🔒 Your payment information is encrypted and secure
+          </div>
+
+        </form>
+
+        <!-- Right: Summary -->
+        <aside class="checkout-summary">
+          <h3>Order Summary</h3>
+
+          <!-- Items filled by JS -->
+          <div class="checkout-summary-items"></div>
+
+          <div class="checkout-totals">
+            <div class="checkout-total-line">
+              <span>Subtotal</span>
+              <span id="checkoutSubtotal">€0.00</span>
+            </div>
+            <div class="checkout-total-line">
+              <span>Shipping</span>
+              <span id="checkoutShipping">€4.99</span>
+            </div>
+            <div class="checkout-total-line checkout-total-line--grand">
+              <span>Total</span>
+              <span class="price" id="checkoutTotal">€0.00</span>
+            </div>
+          </div>
+
+          <div class="checkout-secure" style="margin-top:24px;flex-direction:column;gap:8px;font-size:0.78rem;">
+            <div>🛡️ CE certified safe products</div>
+            <div>🔄 Free 30-day returns</div>
+            <div>🚀 Ships within 24 hours</div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER (minimal) ===== -->
+  <footer class="footer" style="padding:32px 0">
+    <div class="container">
+      <div class="footer__bottom">
+        <span class="footer__copyright">© 2025 Wakko Summer. All rights reserved.</span>
+        <div class="footer__payment">
+          <span class="footer__payment-icon">VISA</span>
+          <span class="footer__payment-icon">MC</span>
+          <span class="footer__payment-icon">PayPal</span>
+          <span class="footer__payment-icon">Klarna</span>
+          <span class="footer__payment-icon">🔒 SSL</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

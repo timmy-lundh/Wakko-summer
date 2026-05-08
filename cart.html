@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart — Wakko Summer</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="cart">
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <nav class="nav">
+      <a class="nav__logo" href="index.html">
+        <span class="nav__logo-icon">☀️</span> Wakko Summer
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#products">Shop</a></li>
+        <li><a href="index.html#categories">Categories</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="cart.html" class="nav__cart-btn active">
+          🛒 Cart <span class="nav__cart-count">0</span>
+        </a>
+        <button class="nav__hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== CART PAGE ===== -->
+  <main class="cart-page">
+    <div class="container">
+      <h1>Your Cart 🛒</h1>
+      <p class="cart-page__subtitle">Review your items, then head to checkout when you're ready.</p>
+
+      <div class="cart-layout">
+
+        <!-- Cart items — rendered by JS -->
+        <div class="cart-items"></div>
+
+        <!-- Summary sidebar -->
+        <aside class="cart-summary">
+          <h3>Order Summary</h3>
+
+          <span id="freeShippingNudge" class="cart-summary__free-shipping" style="display:none"></span>
+
+          <div class="cart-summary__line">
+            <span>Subtotal</span>
+            <span id="cartSubtotal">€0.00</span>
+          </div>
+          <div class="cart-summary__line">
+            <span>Shipping</span>
+            <span id="cartShipping">€4.99</span>
+          </div>
+          <div class="cart-summary__line cart-summary__line--total">
+            <span>Total</span>
+            <span class="cart-summary__total-price" id="cartTotal">€0.00</span>
+          </div>
+
+          <a href="checkout.html" class="btn btn--primary btn--full">
+            Proceed to Checkout →
+          </a>
+          <a href="index.html#products" class="btn btn--secondary btn--full" style="margin-top:10px">
+            Continue Shopping
+          </a>
+
+          <!-- Promo code -->
+          <div class="cart-promo">
+            <span class="cart-promo-label">🏷️ Promo code</span>
+            <div class="cart-promo-input">
+              <input type="text" placeholder="Enter code" />
+              <button class="btn btn--turquoise btn--sm" onclick="showToast('🎉 Code SUMMER20 applied! 20% off.')">Apply</button>
+            </div>
+          </div>
+
+          <!-- Mini trust -->
+          <div class="cart-trust">
+            <div class="cart-trust-item">🔒 Secure SSL checkout</div>
+            <div class="cart-trust-item">🚀 Ships within 24 hours</div>
+            <div class="cart-trust-item">🔄 Free 30-day returns</div>
+            <div class="cart-trust-item">🛡️ CE certified products</div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <span class="footer__brand-logo">☀️ Wakko Summer</span>
+          <p class="footer__brand-desc">Quality summer toys and outdoor fun products for the whole family.</p>
+          <div class="footer__social">
+            <a class="footer__social-link" href="#">📸</a>
+            <a class="footer__social-link" href="#">👍</a>
+            <a class="footer__social-link" href="#">🎵</a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="index.html#products">Water Toys</a></li>
+            <li><a href="index.html#products">Pool Inflatables</a></li>
+            <li><a href="index.html#products">Beach Fun</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">© 2025 Wakko Summer. All rights reserved.</span>
+        <div class="footer__payment">
+          <span class="footer__payment-icon">VISA</span>
+          <span class="footer__payment-icon">MC</span>
+          <span class="footer__payment-icon">PayPal</span>
+          <span class="footer__payment-icon">Klarna</span>
+          <span class="footer__payment-icon">🔒 SSL</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
